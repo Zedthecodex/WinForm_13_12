@@ -34,9 +34,9 @@ namespace WinForm_13_12
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Password_Login = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Username_Login = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
@@ -49,9 +49,9 @@ namespace WinForm_13_12
             this.groupBox1.Controls.Add(this.linkLabel2);
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.Password_Login);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Username_Login);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(35, 40);
@@ -92,12 +92,12 @@ namespace WinForm_13_12
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // Password_Login
             // 
-            this.textBox2.Location = new System.Drawing.Point(60, 284);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(261, 20);
-            this.textBox2.TabIndex = 2;
+            this.Password_Login.Location = new System.Drawing.Point(60, 284);
+            this.Password_Login.Name = "Password_Login";
+            this.Password_Login.Size = new System.Drawing.Size(261, 20);
+            this.Password_Login.TabIndex = 2;
             // 
             // label2
             // 
@@ -108,12 +108,12 @@ namespace WinForm_13_12
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
-            // textBox1
+            // Username_Login
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(261, 20);
-            this.textBox1.TabIndex = 2;
+            this.Username_Login.Location = new System.Drawing.Point(60, 230);
+            this.Username_Login.Name = "Username_Login";
+            this.Username_Login.Size = new System.Drawing.Size(261, 20);
+            this.Username_Login.TabIndex = 2;
             // 
             // label1
             // 
@@ -144,6 +144,7 @@ namespace WinForm_13_12
             this.Controls.Add(this.groupBox1);
             this.Name = "LoginForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -158,9 +159,9 @@ namespace WinForm_13_12
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Password_Login;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Username_Login;
         private System.Windows.Forms.Label label1;
     }
 }

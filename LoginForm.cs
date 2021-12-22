@@ -13,6 +13,7 @@ namespace WinForm_13_12
     public partial class LoginForm : Form
     {
         public bool IsLogin { get; set; } = false;
+        private ManageTeacher manageTeacher = new ManageTeacher();
         public LoginForm()
         {
             InitializeComponent();
@@ -30,7 +31,8 @@ namespace WinForm_13_12
             if (res == DialogResult.OK)
             {
                 //TODO did register, go back to dashboard
-
+                Show();
+                manageTeacher.LoadData();
             }
         }
 
@@ -49,9 +51,24 @@ namespace WinForm_13_12
 
         private void button1_Click(object sender, EventArgs e)
         {
-            IsLogin = true;
-            new DashboardForm().Show();
-            Close();
+            Teacher teacher = manageTeacher.Teachers.Find(
+                t => t.Username == Username_Login.Text &&
+                t.Password == Password_Login.Text);
+
+            if (teacher != null)
+            {
+
+                IsLogin = true;
+                new DashboardForm(teacher).Show();
+                Close();
+
+            }
+            else MessageBox.Show("Invalid Username or Password");
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            manageTeacher.LoadData();
         }
     }
 }
